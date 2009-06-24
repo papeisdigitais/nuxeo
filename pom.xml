@@ -93,6 +93,7 @@
     <jackrabbit.version>1.5.0</jackrabbit.version>
     <jackrabbit.jcr-commons.version>1.5.3</jackrabbit.jcr-commons.version>
     <jackrabbit.core.version>1.5.4</jackrabbit.core.version>
+    <gwt.version>1.5.3</gwt.version>
   </properties>
 
   <dependencyManagement>
@@ -110,7 +111,6 @@
         <version>1.0</version>
         <scope>provided</scope>
       </dependency>
-      <!-- TODO: remove. It's the same as the two preceding ones -->
       <dependency>
         <groupId>javax.ejb</groupId>
         <artifactId>ejb</artifactId>
@@ -127,7 +127,7 @@
         <groupId>javax.el</groupId>
         <artifactId>el-ri</artifactId>
         <version>unknown</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>javax.faces</groupId>
@@ -230,14 +230,14 @@
         <groupId>commons-lang</groupId>
         <artifactId>commons-lang</artifactId>
         <version>2.2</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <!-- used in jboss patch -->
       <dependency>
         <groupId>commons-beanutils</groupId>
         <artifactId>commons-beanutils</artifactId>
         <version>1.6</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <!-- used in jboss patch -->
       <dependency>
@@ -270,7 +270,12 @@
         <groupId>commons-jexl</groupId>
         <artifactId>commons-jexl</artifactId>
         <version>1.1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
+      </dependency>
+      <dependency>
+        <groupId>javax.script</groupId>
+        <artifactId>jexl-engine</artifactId>
+        <version>1.0</version>
       </dependency>
 
       <!-- apache -->
@@ -345,7 +350,7 @@
         <groupId>org.apache.directory.shared</groupId>
         <artifactId>shared-ldap</artifactId>
         <version>${apachedshared.version}</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.directory.server</groupId>
@@ -387,6 +392,7 @@
         <groupId>jmimemagic</groupId>
         <artifactId>jmimemagic</artifactId>
         <version>0.1.2</version>
+        <scope>compile</scope>
         <exclusions>
           <!-- jmimemagic has a dependency on an old xercesImpl -->
           <exclusion>
@@ -436,7 +442,7 @@
         <groupId>jboss</groupId>
         <artifactId>jboss-cache-jdk50</artifactId>
         <version>1.4.0.SP1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
@@ -478,37 +484,37 @@
         <groupId>org.jboss.seam</groupId>
         <artifactId>jboss-seam</artifactId>
         <version>2.0.3.CR1-NX2</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.jboss.seam</groupId>
         <artifactId>jboss-seam-remoting</artifactId>
         <version>2.0.3.CR1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.jboss.seam</groupId>
         <artifactId>jboss-seam-ui</artifactId>
         <version>2.0.3.CR1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.jboss.seam</groupId>
         <artifactId>jboss-seam-mail</artifactId>
         <version>2.0.3.CR1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.jboss.seam</groupId>
         <artifactId>jboss-seam-debug</artifactId>
         <version>2.0.3.CR1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.jboss.el</groupId>
         <artifactId>jboss-el</artifactId>
         <version>2.0.1.GA</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
@@ -532,7 +538,7 @@
         <groupId>jboss</groupId>
         <artifactId>jgroups</artifactId>
         <version>2.2.9</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
@@ -574,19 +580,19 @@
       <dependency>
         <groupId>org.richfaces.framework</groupId>
         <artifactId>richfaces-api</artifactId>
-        <scope>provided</scope>
+        <scope>compile</scope>
         <version>3.3.1.GA</version>
       </dependency>
       <dependency>
         <groupId>org.richfaces.framework</groupId>
         <artifactId>richfaces-impl</artifactId>
-        <scope>provided</scope>
+        <scope>compile</scope>
         <version>3.3.1.GA-NX</version>
       </dependency>
       <dependency>
         <groupId>org.richfaces.ui</groupId>
         <artifactId>richfaces-ui</artifactId>
-        <scope>provided</scope>
+        <scope>compile</scope>
         <version>3.3.1.GA-NX</version>
       </dependency>
 
@@ -595,31 +601,31 @@
         <groupId>org.openoffice</groupId>
         <artifactId>juh</artifactId>
         <version>2.2.0</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.openoffice</groupId>
         <artifactId>jurt</artifactId>
         <version>2.2.0</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.openoffice</groupId>
         <artifactId>ridl</artifactId>
         <version>2.2.0</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.openoffice</groupId>
         <artifactId>unoil</artifactId>
         <version>2.2.0</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>com.artofsolving</groupId>
         <artifactId>jodconverter</artifactId>
         <version>2.1.1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
 
       <!-- others -->
@@ -633,13 +639,13 @@
         <groupId>cssparser</groupId>
         <artifactId>cssparser</artifactId>
         <version>0.9.4-fix</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>com.sun.facelets</groupId>
         <artifactId>jsf-facelets</artifactId>
         <version>1.1.11</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>com.sun.xml</groupId>
@@ -655,7 +661,7 @@
         <groupId>org.freemarker</groupId>
         <artifactId>freemarker</artifactId>
         <version>2.3.11</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>concurrent</groupId>
@@ -691,13 +697,13 @@
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>1.3.0</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-log4j12</artifactId>
         <version>1.3.0</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>net.sf.ehcache</groupId>
@@ -709,7 +715,7 @@
         <groupId>net.sf.json-lib</groupId>
         <artifactId>json-lib</artifactId>
         <version>2.2.1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
         <classifier>jdk15</classifier>
       </dependency>
       <!-- was used by nuxeo-platform-syndication -->
@@ -722,19 +728,19 @@
         <groupId>net.sf.ezmorph</groupId>
         <artifactId>ezmorph</artifactId>
         <version>0.9</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>net.sf.opencsv</groupId>
         <artifactId>opencsv</artifactId>
         <version>1.7</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.osgi</groupId>
         <artifactId>osgi-core</artifactId>
         <version>4.1</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>oro</groupId>
@@ -789,11 +795,13 @@
         <groupId>bouncycastle</groupId>
         <artifactId>bcmail-jdk14</artifactId>
         <version>136</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>bouncycastle</groupId>
         <artifactId>bcprov-jdk14</artifactId>
         <version>136</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>org.fontbox</groupId>
@@ -811,7 +819,7 @@
         <groupId>com.thoughtworks.xstream</groupId>
         <artifactId>xstream</artifactId>
         <version>1.1.3</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.dojotoolkit</groupId>
@@ -832,18 +840,6 @@
         <scope>provided</scope>
       </dependency>
       <dependency>
-        <groupId>xml-apis</groupId>
-        <artifactId>xml-apis</artifactId>
-        <scope>provided</scope>
-        <version>1.0.b2</version>
-      </dependency>
-      <dependency>
-        <groupId>xerces</groupId>
-        <artifactId>xmlParserAPIs</artifactId>
-        <scope>provided</scope>
-        <version>2.6.2</version>
-      </dependency>
-      <dependency>
         <groupId>jsr170</groupId>
         <artifactId>jcr</artifactId>
         <version>1.0</version>
@@ -853,7 +849,7 @@
         <groupId>org.codehaus.groovy</groupId>
         <artifactId>groovy-all</artifactId>
         <version>1.5.7</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.codehaus.groovy</groupId>
@@ -871,13 +867,13 @@
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>resteasy-jaxrs</artifactId>
         <version>1.0.2.GA-nx</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>jaxrs-api</artifactId>
         <version>1.0.2.GA</version>
-        <scope>provided</scope>
+        <scope>compile</scope>
       </dependency>
 
       <dependency>
@@ -940,6 +936,7 @@
         <groupId>org.wikimodel</groupId>
         <artifactId>wem</artifactId>
         <version>2.0.2</version>
+        <scope>compile</scope>
       </dependency>
 
       <!-- used by APT for annotation processing -->
@@ -1004,6 +1001,7 @@
         <groupId>rome</groupId>
         <artifactId>rome</artifactId>
         <version>0.8</version>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>jdom</groupId>
@@ -1014,6 +1012,7 @@
         <groupId>org.restlet</groupId>
         <artifactId>org.restlet</artifactId>
         <version>1.0.7</version>
+        <scope>compile</scope>
       </dependency>
       <dependency>
         <groupId>org.restlet</groupId>
@@ -1034,6 +1033,33 @@
         <groupId>javax.ressource</groupId>
         <artifactId>jca-api</artifactId>
         <version>1.5</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-servlet</artifactId>
+        <version>${gwt.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-user</artifactId>
+        <version>${gwt.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-dev</artifactId>
+        <version>${gwt.version}</version>
+        <classifier>${os.platform}-libs</classifier>
+        <type>zip</type>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-dev</artifactId>
+        <version>${gwt.version}</version>
+        <scope>provided</scope>
+        <classifier>${os.platform}</classifier>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -1728,6 +1754,42 @@
           </plugin>
         </plugins>
       </reporting>
+    </profile>
+    <profile>
+      <id>os-windows</id>
+      <properties>
+        <os.platform>windows</os.platform>
+      </properties>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <os>
+          <family>windows</family>
+        </os>
+      </activation>
+    </profile>
+    <profile>
+      <id>os-mac</id>
+      <properties>
+        <os.platform>mac</os.platform>
+      </properties>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <os>
+          <family>mac</family>
+        </os>
+      </activation>
+    </profile>
+    <profile>
+      <id>os-linux</id>
+      <properties>
+        <os.platform>linux</os.platform>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+        <os>
+          <name>linux</name>
+        </os>
+      </activation>
     </profile>
   </profiles>
 
