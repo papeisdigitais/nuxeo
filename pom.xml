@@ -126,7 +126,7 @@
       <dependency>
         <groupId>javax.el</groupId>
         <artifactId>el-ri</artifactId>
-        <version>unknown</version>
+        <version>1.2</version>
         <scope>compile</scope>
       </dependency>
       <dependency>
@@ -460,7 +460,7 @@
         <groupId>jboss</groupId>
         <artifactId>jboss-cache-jdk50</artifactId>
         <version>1.4.0.SP1</version>
-        <scope>compile</scope>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
@@ -862,12 +862,6 @@
         <scope>provided</scope>
       </dependency>
       <dependency>
-        <groupId>commons-jexl</groupId>
-        <artifactId>commons-jexl</artifactId>
-        <version>1.1</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
         <groupId>jsr170</groupId>
         <artifactId>jcr</artifactId>
         <version>1.0</version>
@@ -1073,6 +1067,7 @@
         <groupId>javax.resource</groupId>
         <artifactId>connector-api</artifactId>
         <version>1.5</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.google.gwt</groupId>
